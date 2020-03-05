@@ -12,10 +12,11 @@
 
     --fw-reg: 300;
     --fw-bold: 900;
+    --fw-nav: 150;
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #5dca5d;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -38,6 +39,10 @@
 
 
 /* General style */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background: var(--clr-light);
@@ -143,10 +148,58 @@ h3{
 }
 
 /* Header */
+.sagir {
+    
+    right: 0;
+    left: 0;
+    z-index: 999;
+    
 
-nav {
-   
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    background: var(--clr-dark);
+    height: 150px;
+    
+}
+
+.logo {
+    max-width: 50%;
+}
+
+.nav {
+    background: var(--clr-dark);
+    padding-right: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    
+    z-index: 100;
+     
+}
+
+.nav__list {
+    list-style: none;
+    color: var(--clr-accent);
+}
+
+
+.nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color:  var(--clr-accent);
+}
+
 
 /* intro section */ 
 
@@ -294,7 +347,7 @@ nav {
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: var(--clr-dark);
     overflow: hidden;
 }
 
@@ -318,6 +371,7 @@ nav {
 /* footer styling */
 
 .footer {
+    
     background: #111;
     color: var(--clr-accent);
     text-align: center;
